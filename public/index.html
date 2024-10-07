@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Name</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <link href="./index.css" type="stylesheet">
+</head>
+<body class="bg-gray-50 raleway w-5/6 m-auto">
+
+    <div class="bg-gray-100 p-6 rounded-3xl shadow-md">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold">Restaurant Name</h1>
+            <div class="flex justify-center mt-4 space-x-8">
+                <a href="#about" class="hover:underline">About</a>
+                <a href="#menu" class="hover:underline">Menu</a>
+                <a href="#contact" class="hover:underline">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto p-6">
+        <div id="about" class="mb-10 p-6 bg-white rounded-lg shadow-md flex flex-col items-center">
+            <h2 class="text-3xl font-semibold mb-4">About Us</h2>
+            <p class="text-center">Welcome to our restaurant! We offer a variety of delicious meals made from fresh ingredients, crafted with care to ensure you have a memorable dining experience.</p>
+        </div>
+
+        <div id="menu" class="mb-10 p-6 bg-white rounded-lg shadow-md">
+            <h2 class="text-3xl font-semibold mb-4 text-center">Our Menu</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-100 p-4 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold">Pasta Primavera</h3>
+                    <p class="text-gray-600">$12</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold">Grilled Salmon</h3>
+                    <p class="text-gray-600">$18</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold">Caesar Salad</h3>
+                    <p class="text-gray-600">$10</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold">Chocolate Cake</h3>
+                    <p class="text-gray-600">$7</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="mb-10 p-6 bg-white rounded-lg shadow-md flex flex-col items-center">
+            <h2 class="text-3xl font-semibold mb-4">Contact Us</h2>
+            <p>Email: <a href="mailto:info@restaurant.com" class="text-blue-500 hover:underline">info@restaurant.com</a></p>
+            <p>Phone: <span class="text-blue-500">(123) 456-7890</span></p>
+        </div>
+    </div>
+
+    <!-- <div class="bg-gray-800 text-white p-4 text-center">
+        <p>&copy; 2024 Restaurant Name. All rights reserved.</p>
+    </div> -->
+
+</body>
+</html>
