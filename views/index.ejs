@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Gourmet Haven</title>
+</head>
+<body class="bg-gradient-to-br from-green-200 to-blue-300">
+    <header class="bg-white shadow-lg">
+        <nav class="container mx-auto flex justify-between items-center p-5">
+            <div class="text-3xl font-bold text-green-600">Gourmet Haven</div>
+            <div class="flex space-x-4">
+                <a href="/signup" class="bg-green-600 text-white py-2 px-6 rounded-lg shadow-md hover:bg-green-700 transition-transform transform hover:scale-105">
+                    Get Started
+                </a>
+                <a href="/login" class="bg-gray-200 text-gray-600 py-2 px-6 rounded-lg shadow-md hover:bg-gray-300 transition-transform transform hover:scale-105">
+                    Login
+                </a>
+            </div>
+        </nav>
+    </header>
+    
+    
+
+    <main class="mx-auto">
+        <section class="relative bg-cover bg-center h-screen w-full" style="background-image: url('https://plus.unsplash.com/premium_photo-1661953124283-76d0a8436b87?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D');">
+            <div class="absolute inset-0 bg-black opacity-70"></div>
+            <div class="relative flex flex-col items-center justify-center h-full text-center p-8">
+                <h1 class="text-6xl font-extrabold text-white mb-4 drop-shadow-lg">Welcome to Gourmet Haven</h1>
+                <p class="text-lg text-gray-300 mb-6 max-w-3xl px-4 drop-shadow-md">
+                    Indulge in a culinary experience where each dish tells a story. At Gourmet Haven, we celebrate flavors from around the world, crafted with passion and the freshest ingredients. Whether you’re here for a casual meal or a special occasion, our inviting atmosphere and exceptional service promise to make your visit unforgettable.
+                </p>
+                <a href="#menu" class="bg-green-600 text-white px-8 py-4 rounded-full text-lg hover:bg-green-700 transition shadow-lg transform hover:scale-105">Explore Our Menu</a>
+                <div class="mt-10 flex justify-center space-x-4">
+                    <a href="#about" class="text-green-600 underline">Learn More About Us</a>
+                    <a href="#reservations" class="text-green-600 underline">Make a Reservation</a>
+                </div>
+            </div>
+        </section>        
+    </main>
+
+    <div class="container mx-auto">
+        <section class="mt-20" id="menu"></section>
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Our Menu</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-5 rounded-lg shadow-lg hover:shadow-2xl hover:bg-green-50 transition transform hover:scale-105 duration-300">
+                    <h3 class="text-xl font-semibold text-green-600">Spaghetti Carbonara</h3>
+                    <p class="text-gray-600">Classic Italian pasta dish with eggs, cheese, pancetta, and pepper.</p>
+                    <span class="block mt-4 text-lg font-bold text-gray-800">$12.99</span>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow-lg hover:shadow-2xl hover:bg-green-50 transition transform hover:scale-105 duration-300">
+                    <h3 class="text-xl font-semibold text-green-600">Margherita Pizza</h3>
+                    <p class="text-gray-600">Traditional pizza topped with fresh tomatoes, mozzarella cheese, and basil.</p>
+                    <span class="block mt-4 text-lg font-bold text-gray-800">$14.99</span>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow-lg hover:shadow-2xl hover:bg-green-50 transition transform hover:scale-105 duration-300">
+                    <h3 class="text-xl font-semibold text-green-600">Tiramisu</h3>
+                    <p class="text-gray-600">A coffee-flavored Italian dessert made with mascarpone cheese and cocoa.</p>
+                    <span class="block mt-4 text-lg font-bold text-gray-800">$16.99</span>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mt-20" id="showcase">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Featured Dishes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105 duration-300">
+                    <img src="https://images.unsplash.com/photo-1529042355636-0f06afe127a9?q=80&w=2848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Delicious Pasta" class="w-full h-48 object-cover">
+                    <div class="p-5 bg-white">
+                        <h3 class="text-xl font-semibold text-green-600">Pasta Primavera</h3>
+                        <p class="text-gray-600">A vibrant mix of fresh vegetables with pasta in a light sauce.</p>
+                    </div>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105 duration-300">
+                    <img src="https://plus.unsplash.com/premium_photo-1661762555601-47d088a26b50?q=80&w=4492&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Delicious Pizza" class="w-full h-48 object-cover">
+                    <div class="p-5 bg-white">
+                        <h3 class="text-xl font-semibold text-green-600">Pepperoni Pizza</h3>
+                        <p class="text-gray-600">Classic pizza topped with spicy pepperoni slices and cheese.</p>
+                    </div>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105 duration-300">
+                    <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hvY29sYXRlfGVufDB8fDB8fHww" alt="Delicious Dessert" class="w-full h-48 object-cover">
+                    <div class="p-5 bg-white">
+                        <h3 class="text-xl font-semibold text-green-600">Chocolate Fondant</h3>
+                        <p class="text-gray-600">Rich chocolate dessert with a molten center, served warm.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="mt-20 py-16 bg-gray-900 text-white" id="about">
+            <h2 class="text-4xl font-bold text-center mb-8">About Us</h2>
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between p-6 bg-gray-800 rounded-lg shadow-lg">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <h3 class="text-2xl font-semibold text-green-400 mb-4">Our Philosophy</h3>
+                    <p class="text-lg mb-4">
+                        At Gourmet Haven, we believe in serving not just food, but experiences. Our chefs craft each dish with passion, using only the freshest ingredients to ensure your meal is unforgettable.
+                    </p>
+                    <p class="text-lg">
+                        We source our ingredients locally whenever possible, honoring the flavors of the season and supporting our community. Join us as we celebrate culinary artistry and hospitality.
+                    </p>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=4568&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Our Kitchen" class="rounded-lg shadow-md w-full max-w-sm">
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="mt-20" id="contact">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Contact Us</h2>
+            <form class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700">Name</label>
+                    <input type="text" id="name" class="border rounded-lg w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-600" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700">Email</label>
+                    <input type="email" id="email" class="border rounded-lg w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-600" required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700">Message</label>
+                    <textarea id="message" rows="4" class="border rounded-lg w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-600" required></textarea>
+                </div>
+                <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="bg-white mt-20 py-5">
+        <div class="container mx-auto text-center text-gray-600">
+            <p>&copy; 2024 Gourmet Haven. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            const target = document.querySelector(this.getAttribute('href'));
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    });
+    </script>
+    
+</html>
