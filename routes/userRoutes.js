@@ -7,7 +7,7 @@ router.post('/register', async (req, res) => {
     const { username, password, email } = req.body;
     try {
         const hashedPassword = await bcrypt.hash(password, 10); 
-        const [result] = connection.query('INSERT INTO Users (username, password, email) VALUES (?, ?, ?)', [username, hashedPassword, email]);
+        await connection.execute('INSERT INTO Users (username, password, email) VALUES (?, ?, ?)', [username, hashedPassword, email]);
         res.status(201).json({ message: 'User registered successfully'});
     } catch (error) {
         res.status(500).json({ error: error.message });
@@ -15,9 +15,9 @@ router.post('/register', async (req, res) => {
 });
 
 router.post('/login', async (req, res) => {
-    const { username, password } = req.body;
+    const { email, password } = req.body;
     try {
-        const [rows] = await pool.query('SELECT * FROM Users WHERE username = ?', [username]);
+        const [rows] = await connection.query('SELECT * FROM Users WHERE email = ?', [email]);
         
         if (rows.length === 0) {
             return res.status(401).json({ message: 'Invalid username or password' });

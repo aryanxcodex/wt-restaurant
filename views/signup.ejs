@@ -76,7 +76,7 @@
        
         axios.post('http://localhost:3000/api/users/register', postData)
             .then(response => {
-                console.log('POST Response:', response.data);
+                console.log('POST Response:', response.data.message);
                 Toastify({
                     text: "Sign Up Successful!",
                     duration: 3000,
@@ -84,6 +84,7 @@
                     position: 'center',
                     backgroundColor: "#4CAF50",
                 }).showToast();
+                window.location.href = "http://localhost:3000/login";
             })
             .catch(error => {
                 console.error('Error posting data:', error);

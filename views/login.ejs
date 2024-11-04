@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Gourmet Haven</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body class="flex h-screen">
     <div class="w-1/2 flex items-center justify-center p-8 border-r-2 border-gray-300 bg-gradient-to-r from-green-200 to-white">
@@ -17,7 +18,7 @@
                 </a>
                 <h2 class="text-2xl font-bold text-green-600">Welcome Back!</h2>
             </div>
-            <form>
+            <form id="loginForm">
                 <div class="mb-4">
                     <label for="email" class="block text-gray-700">Email</label>
                     <input type="email" id="email" class="border rounded-lg w-full p-2 focus:outline-none focus:ring-2 focus:ring-green-500" required>
@@ -35,4 +36,44 @@
         <img src="https://images.unsplash.com/photo-1508424757105-b6d5ad9329d0?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Delicious Food" class="object-cover h-full w-full rounded-l-lg">
     </div>
 </body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+        event.preventDefault(); 
+
+        
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        const postData = {
+            email: email,
+            password: password
+        };
+
+       
+        axios.post('http://localhost:3000/api/users/login', postData)
+            .then(response => {
+                console.log('POST Response:', response.data.message);
+                Toastify({
+                    text: "Login Successful",
+                    duration: 3000,
+                    gravity: "top",
+                    position: 'center',
+                    backgroundColor: "#4CAF50",
+                }).showToast();
+                window.location.href = "http://localhost:3000"
+            })
+            .catch((error) => {
+                console.error('Error posting data:', error);
+                Toastify({
+                    text: error.response.data.message,
+                    duration: 3000,
+                    gravity: "top",
+                    position: 'center',
+                    backgroundColor: "#f44336",
+                }).showToast();
+            });
+    });
+</script>
 </html>
