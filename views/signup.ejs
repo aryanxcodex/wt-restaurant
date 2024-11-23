@@ -1,102 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up | Gourmet Haven</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+  </head>
 
-<body class="flex h-screen">
+  <body class="flex h-screen">
     <div class="w-1/2 hidden md:block">
-        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D"
-            alt="Delicious Food" class="object-cover h-full w-full rounded-l-lg">
+      <img
+        src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D"
+        alt="Delicious Food"
+        class="object-cover h-full w-full rounded-l-lg"
+      />
     </div>
     <div
-        class="w-1/2 flex items-center justify-center p-8 border-l-2 border-gray-300 bg-gradient-to-r from-green-200 to-white">
-        <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
-            <div class="flex items-center mb-6">
-                <a href="javascript:history.back()" class="text-green-600 hover:underline flex items-center mr-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M15 12H3m0 0L9 6m-6 6l6 6" />
-                    </svg>
-                </a>
-                <h2 class="text-2xl font-bold text-green-600">Create an Account</h2>
-            </div>
-
-            <form id="signupForm">
-                <div class="mb-4">
-                    <label for="name" class="block text-gray-700">Name</label>
-                    <input type="text" id="name"
-                        class="border rounded-lg w-full p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
-                        required>
-                </div>
-                <div class="mb-4">
-                    <label for="email" class="block text-gray-700">Email</label>
-                    <input type="email" id="email"
-                        class="border rounded-lg w-full p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
-                        required>
-                </div>
-                <div class="mb-4">
-                    <label for="password" class="block text-gray-700">Password</label>
-                    <input type="password" id="password"
-                        class="border rounded-lg w-full p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
-                        required>
-                </div>
-                <button type="submit"
-                    class="bg-green-600 text-white py-2 px-4 rounded-lg w-full hover:bg-green-700 transition">Sign
-                    Up</button>
-            </form>
-            <p class="mt-4 text-center text-gray-600">Already have an account? <a href="/login"
-                    class="text-green-600 hover:underline">Log In</a></p>
+      class="w-1/2 flex items-center justify-center p-8 border-l-2 border-gray-300 bg-gradient-to-r from-green-200 to-white"
+    >
+      <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
+        <div class="flex items-center mb-6">
+          <a
+            href="javascript:history.back()"
+            class="text-green-600 hover:underline flex items-center mr-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 mr-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 12H3m0 0L9 6m-6 6l6 6"
+              />
+            </svg>
+          </a>
+          <h2 class="text-2xl font-bold text-green-600">Create an Account</h2>
         </div>
-    </div>
-</body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script>
-    document.getElementById('signupForm').addEventListener('submit', function (event) {
-        event.preventDefault(); 
 
-        
-        const username = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
+        <form id="signupForm">
+          <div class="mb-4">
+            <label for="name" class="block text-gray-700">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="border rounded-lg w-full p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-gray-700">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="border rounded-lg w-full p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+              required
+            />
+          </div>
+          <div class="mb-4 relative">
+            <label for="password" class="block text-gray-700">Password</label>
+            <div class="relative">
+              <input
+                type="password"
+                id="password"
+                class="border rounded-lg w-full p-2 pr-10 focus:outline-none focus:ring-2 focus:ring-green-500"
+                required
+              />
+              <!-- Eye Button -->
+              <button
+                type="button"
+                id="togglePassword"
+                class="absolute inset-y-0 right-3 flex items-center justify-center"
+              >
+                <svg
+                  id="eyeIcon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-gray-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="bg-green-600 text-white py-2 px-4 rounded-lg w-full hover:bg-green-700 transition"
+          >
+            Sign Up
+          </button>
+        </form>
+        <p class="mt-4 text-center text-gray-600">
+          Already have an account?
+          <a href="/login" class="text-green-600 hover:underline">Log In</a>
+        </p>
+      </div>
+    </div>
+  </body>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/toastify-js"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    document
+      .getElementById("signupForm")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const username = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
 
         const postData = {
-            username: username,
-            email: email,
-            password: password
+          username: username,
+          email: email,
+          password: password,
         };
 
-       
-        axios.post('http://localhost:3000/api/users/register', postData)
-            .then(response => {
-                console.log('POST Response:', response.data.message);
-                Toastify({
-                    text: "Sign Up Successful!",
-                    duration: 3000,
-                    gravity: "top",
-                    position: 'center',
-                    backgroundColor: "#4CAF50",
-                }).showToast();
-                window.location.href = "http://localhost:3000/login";
-            })
-            .catch(error => {
-                console.error('Error posting data:', error);
-                Toastify({
-                    text: "Error signing up. Please try again.",
-                    duration: 3000,
-                    gravity: "top",
-                    position: 'center',
-                    backgroundColor: "#f44336",
-                }).showToast();
-            });
-    });
-</script>
+        axios
+          .post("http://localhost:3000/api/users/register", postData)
+          .then((response) => {
+            console.log("POST Response:", response.data.message);
+            Toastify({
+              text: "Sign Up Successful!",
+              duration: 3000,
+              gravity: "top",
+              position: "center",
+              backgroundColor: "#4CAF50",
+            }).showToast();
+            window.location.href = "http://localhost:3000/login";
+          })
+          .catch((error) => {
+            console.error("Error posting data:", error);
+            Toastify({
+              text: "Error signing up. Please try again.",
+              duration: 3000,
+              gravity: "top",
+              position: "center",
+              backgroundColor: "#f44336",
+            }).showToast();
+          });
+      });
 
+    // Password toggle logic
+    const togglePassword = document.getElementById("togglePassword");
+    const passwordInput = document.getElementById("password");
+    const eyeIcon = document.getElementById("eyeIcon");
+
+    togglePassword.addEventListener("click", function () {
+      const isPassword = passwordInput.type === "password";
+      passwordInput.type = isPassword ? "text" : "password";
+
+      // Change the icon
+      if (isPassword) {
+        eyeIcon.setAttribute(
+          "d",
+          "M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+        );
+      } else {
+        eyeIcon.setAttribute("d", "M15 12a3 3 0 11-6 0 3 3 0 016 0z");
+      }
+    });
+  </script>
 </html>

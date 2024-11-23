@@ -1,114 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <title>Restaurant Dashboard - Gourmet Haven</title>
-</head>
-<body class="bg-gradient-to-br from-green-200 to-blue-300">
+  </head>
+  <body class="bg-gradient-to-br from-green-200 to-blue-300">
     <header class="bg-white shadow-lg">
-        <nav class="container mx-auto flex justify-between items-center p-5">
-            <div class="text-3xl font-bold text-green-600">Gourmet Haven Dashboard</div>
-            <div class="flex space-x-4">
-                <a href="/dashboard" class="bg-green-600 text-white py-2 px-6 rounded-lg shadow-md hover:bg-green-700 transition-transform transform hover:scale-105">
-                    Dashboard
-                </a>
-                <a href="/logout" class="bg-gray-200 text-gray-600 py-2 px-6 rounded-lg shadow-md hover:bg-gray-300 transition-transform transform hover:scale-105">
-                    Logout
-                </a>
-            </div>
-        </nav>
+      <nav class="container mx-auto flex justify-between items-center p-5">
+        <div class="text-3xl font-bold text-green-600">
+          Gourmet Haven Dashboard
+        </div>
+        <div class="flex space-x-4">
+          <a
+            href="/logout"
+            class="bg-gray-200 text-gray-600 py-2 px-6 rounded-lg shadow-md hover:bg-gray-300 transition-transform transform hover:scale-105"
+          >
+            Logout
+          </a>
+        </div>
+      </nav>
     </header>
 
     <main class="container mx-auto p-8">
-        <section id="menu" class="mb-20">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Manage Menu</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Menu Item 1 -->
-                <div class="bg-white p-5 rounded-lg shadow-lg hover:shadow-2xl hover:bg-green-50 transition transform hover:scale-105 duration-300">
-                    <h3 class="text-xl font-semibold text-green-600">Spaghetti Carbonara</h3>
-                    <p class="text-gray-600">Classic Italian pasta dish with eggs, cheese, pancetta, and pepper.</p>
-                    <span class="block mt-4 text-lg font-bold text-gray-800">$12.99</span>
-                    <div class="mt-4 flex justify-between">
-                        <button class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition">Edit</button>
-                        <button class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition">Delete</button>
-                    </div>
-                </div>
+      <section id="reservations">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">
+          Make a Reservation
+        </h2>
+        <form
+          id="reservationForm"
+          class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg"
+        >
+          <div class="mb-4">
+            <label for="name" class="block text-gray-700">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="border rounded-lg w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-600"
+              required
+            />
+          </div>
 
-                <!-- Menu Item 2 -->
-                <div class="bg-white p-5 rounded-lg shadow-lg hover:shadow-2xl hover:bg-green-50 transition transform hover:scale-105 duration-300">
-                    <h3 class="text-xl font-semibold text-green-600">Margherita Pizza</h3>
-                    <p class="text-gray-600">Traditional pizza topped with fresh tomatoes, mozzarella cheese, and basil.</p>
-                    <span class="block mt-4 text-lg font-bold text-gray-800">$14.99</span>
-                    <div class="mt-4 flex justify-between">
-                        <button class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition">Edit</button>
-                        <button class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition">Delete</button>
-                    </div>
-                </div>
+          <div class="mb-4">
+            <label for="phone" class="block text-gray-700">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="border rounded-lg w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-600"
+              required
+            />
+          </div>
 
-                <!-- Menu Item 3 -->
-                <div class="bg-white p-5 rounded-lg shadow-lg hover:shadow-2xl hover:bg-green-50 transition transform hover:scale-105 duration-300">
-                    <h3 class="text-xl font-semibold text-green-600">Tiramisu</h3>
-                    <p class="text-gray-600">A coffee-flavored Italian dessert made with mascarpone cheese and cocoa.</p>
-                    <span class="block mt-4 text-lg font-bold text-gray-800">$16.99</span>
-                    <div class="mt-4 flex justify-between">
-                        <button class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition">Edit</button>
-                        <button class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition">Delete</button>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-8 text-center">
-                <button class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">Add New Item</button>
-            </div>
-        </section>
+          <div class="mb-4">
+            <label for="email" class="block text-gray-700">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="border rounded-lg w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-600"
+            />
+          </div>
 
-        <section id="reservations">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Make a Reservation</h2>
-            <form class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
-                <div class="mb-4">
-                    <label for="name" class="block text-gray-700">Name</label>
-                    <input type="text" id="name" class="border rounded-lg w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-600" required>
-                </div>
-                <div class="mb-4">
-                    <label for="email" class="block text-gray-700">Email</label>
-                    <input type="email" id="email" class="border rounded-lg w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-600" required>
-                </div>
-                <div class="mb-4">
-                    <label for="phone" class="block text-gray-700">Phone Number</label>
-                    <input type="text" id="phone" class="border rounded-lg w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-600" required>
-                </div>
-                <div class="mb-4">
-                    <label for="reservation-date" class="block text-gray-700">Reservation Date</label>
-                    <input type="date" id="reservation-date" class="border rounded-lg w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-600" required>
-                </div>
-                <div class="mb-4">
-                    <label for="reservation-time" class="block text-gray-700">Reservation Time</label>
-                    <input type="time" id="reservation-time" class="border rounded-lg w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-600" required>
-                </div>
-                <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">Submit Reservation</button>
-            </form>
-        </section>
+          <div class="mb-4">
+            <label for="reservation-date" class="block text-gray-700"
+              >Reservation Date</label
+            >
+            <input
+              type="date"
+              id="reservation-date"
+              name="reservation-date"
+              class="border rounded-lg w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-600"
+              required
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="reservation-time" class="block text-gray-700"
+              >Reservation Time</label
+            >
+            <input
+              type="time"
+              id="reservation-time"
+              name="reservation-time"
+              class="border rounded-lg w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-600"
+              required
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="guests" class="block text-gray-700"
+              >Number of Guests</label
+            >
+            <input
+              type="number"
+              id="guests"
+              name="guests"
+              min="1"
+              class="border rounded-lg w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-600"
+              required
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="requests" class="block text-gray-700"
+              >Special Requests</label
+            >
+            <textarea
+              id="requests"
+              name="requests"
+              rows="3"
+              class="border rounded-lg w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-600"
+              placeholder="Any special requests?"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition"
+          >
+            Submit Reservation
+          </button>
+        </form>
+      </section>
     </main>
 
     <footer class="bg-white mt-20 py-5">
-        <div class="container mx-auto text-center text-gray-600">
-            <p>&copy; 2024 Gourmet Haven. All rights reserved.</p>
-        </div>
+      <div class="container mx-auto text-center text-gray-600">
+        <p>&copy; 2024 Gourmet Haven. All rights reserved.</p>
+      </div>
     </footer>
-</body>
-<script>
-    // Smooth scroll for navigation
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-    
-            const target = document.querySelector(this.getAttribute('href'));
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+  </body>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/toastify-js"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
         });
+      });
     });
-</script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+      Toastify({
+        text: "Welcome Back !!",
+        duration: 3000,
+        gravity: "top",
+        position: "center",
+        backgroundColor: "#4CAF50",
+      }).showToast();
+    });
+
+    const reservationForm = document.getElementById("reservationForm");
+
+    reservationForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const formData = {
+        name: document.getElementById("name").value,
+        phone: document.getElementById("phone").value,
+        email: document.getElementById("email").value,
+        reservationDate: document.getElementById("reservation-date").value,
+        reservationTime: document.getElementById("reservation-time").value,
+        guests: document.getElementById("guests").value,
+        requests: document.getElementById("requests").value,
+      };
+
+      try {
+        const response = await axios.post("http://localhost:3000/api/users/reserve", formData);
+
+        Toastify({
+          text: response.data.message,
+          duration: 3000,
+          gravity: "top",
+          position: "center",
+          backgroundColor: "#4CAF50",
+        }).showToast();
+
+        reservationForm.reset();
+      } catch (error) {
+        Toastify({
+          text: "Error: Unable to create reservation.",
+          duration: 3000,
+          gravity: "top",
+          position: "center",
+          backgroundColor: "#f44336",
+        }).showToast();
+      }
+    });
+  </script>
 </html>
